@@ -1,0 +1,103 @@
+body {
+  background: #2C3034;
+}
+
+body *, html * {
+  box-sizing: border-box;
+}
+
+h1, .credits {
+  color: #03A9F4;
+}
+
+#title {
+  margin-top: 150px;
+}
+
+.containered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#links {
+  margin-top: 50px;
+}
+
+.anchors {
+  font-size: 15px;
+  border-bottom: 1px solid black;
+}
+
+.snippet {
+  color: white;
+  padding-left: 10px;
+}
+
+.search-box input[type="search"] {
+  border: none;
+  background: none;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  transition: all .25s ease-in .25s;
+  color: transparent;
+  font-size: 2rem;
+  line-height: 25px;
+}
+.search-box input[type="search"]:hover {
+  cursor: pointer;
+}
+.search-box input[type="search"]:hover:focus {
+  cursor: text;
+}
+.search-box input[type="search"]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type="search"]:focus {
+  width: 300px;
+  padding: 0 10px 10px 10px;
+  outline: none;
+  color: black;
+  background: none;
+  color: white;
+}
+.search-box input[type="search"]:focus + span {
+  width: 300px;
+}
+.search-box input[type="search"]:focus + span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+.search-box input[type="search"] + span {
+  z-index: -1;
+  position: absolute;
+  border: 2px solid white;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  transition: all .25s ease-in .25s;
+  border-radius: 25px;
+  left: 0;
+}
+.search-box input[type="search"] + span::before {
+  transition: all .25s ease-in .5s;
+  transform-origin: left top;
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(44px, -2px);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  /* Height of the footer */
+  color: white;
+}
